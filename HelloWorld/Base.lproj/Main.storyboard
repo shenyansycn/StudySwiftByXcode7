@@ -6,6 +6,58 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Toolbar SampleVC-->
+        <scene sceneID="2xe-sL-ZCn">
+            <objects>
+                <viewController id="7JC-BB-DUS" customClass="ToolbarSampleVC" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Y2-zL-os6"/>
+                        <viewControllerLayoutGuide type="bottom" id="1zU-eD-e2w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K5f-jI-NeD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cB-8V-rEg">
+                                <rect key="frame" x="279" y="290" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGk-88-nuE">
+                                <rect key="frame" x="20" y="556" width="560" height="44"/>
+                                <items>
+                                    <barButtonItem title="Save" systemItem="save" id="SCJ-Wi-Q4C">
+                                        <connections>
+                                            <action selector="save:" destination="7JC-BB-DUS" id="Qm0-5r-izE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Qur-Kg-isi"/>
+                                    <barButtonItem title="Open" id="e4p-wN-kc5">
+                                        <connections>
+                                            <action selector="open:" destination="7JC-BB-DUS" id="Ygx-L8-X0l"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4cB-8V-rEg" firstAttribute="centerY" secondItem="K5f-jI-NeD" secondAttribute="centerY" id="5GU-wt-aBf"/>
+                            <constraint firstItem="1zU-eD-e2w" firstAttribute="top" secondItem="EGk-88-nuE" secondAttribute="bottom" id="BYx-HK-0vH"/>
+                            <constraint firstItem="EGk-88-nuE" firstAttribute="leading" secondItem="K5f-jI-NeD" secondAttribute="leadingMargin" id="Obp-xO-44G"/>
+                            <constraint firstItem="EGk-88-nuE" firstAttribute="trailing" secondItem="K5f-jI-NeD" secondAttribute="trailingMargin" id="fPC-XM-oCj"/>
+                            <constraint firstItem="4cB-8V-rEg" firstAttribute="centerX" secondItem="K5f-jI-NeD" secondAttribute="centerX" id="qm6-km-NCV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="4cB-8V-rEg" id="TjT-6N-N8A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qeb-W8-O7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="-917"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -48,6 +100,13 @@
                                     <segue destination="ARR-ZJ-2fW" kind="show" id="eFj-Jm-b1k"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHZ-9D-Bcy">
+                                <rect key="frame" x="249" y="200" width="103" height="30"/>
+                                <state key="normal" title="ToolbarSample"/>
+                                <connections>
+                                    <segue destination="7JC-BB-DUS" kind="show" id="Ezc-ep-VSG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -57,6 +116,8 @@
                             <constraint firstItem="1hK-oJ-UtS" firstAttribute="top" secondItem="2n8-mx-4Cz" secondAttribute="bottom" constant="10" id="WCA-I4-rie"/>
                             <constraint firstItem="2n8-mx-4Cz" firstAttribute="top" secondItem="kbm-15-7sp" secondAttribute="bottom" constant="20" id="ZfS-Du-DNi"/>
                             <constraint firstItem="1hK-oJ-UtS" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="f5g-Bq-Uag"/>
+                            <constraint firstItem="dHZ-9D-Bcy" firstAttribute="top" secondItem="2ff-hH-JA9" secondAttribute="bottom" constant="10" id="f6U-EW-mYh"/>
+                            <constraint firstItem="dHZ-9D-Bcy" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="fud-tw-qkR"/>
                             <constraint firstItem="hYR-3W-FzL" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="jg7-f3-qe5"/>
                             <constraint firstItem="hYR-3W-FzL" firstAttribute="top" secondItem="1hK-oJ-UtS" secondAttribute="bottom" constant="10" id="xZs-7s-fEw"/>
                         </constraints>
@@ -104,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UfN-MM-7vp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="-362"/>
+            <point key="canvasLocation" x="1524" y="-250"/>
         </scene>
         <!--Switch Slider Segmented Control Sample-->
         <scene sceneID="J6X-eg-RyI">
@@ -249,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViU-ge-4lS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1387.5" y="1160.9154929577464"/>
+            <point key="canvasLocation" x="1524" y="1082"/>
         </scene>
         <!--Indicator View Progress ViewVC-->
         <scene sceneID="vcM-gL-YC5">
@@ -306,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgE-zf-Pal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221.25" y="1188.3802816901402"/>
+            <point key="canvasLocation" x="899" y="1168"/>
         </scene>
     </scenes>
 </document>
