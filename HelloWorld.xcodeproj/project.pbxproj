@@ -17,6 +17,7 @@
 		A6A9C0171BA974DA005FBE2E /* Switch_Slider_SegmentedControlSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A9C0161BA974DA005FBE2E /* Switch_Slider_SegmentedControlSample.swift */; };
 		A6ADDB741BB0F74600F70729 /* AlertViewActionSheetSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ADDB731BB0F74600F70729 /* AlertViewActionSheetSampleVC.swift */; settings = {ASSET_TAGS = (); }; };
 		A6ADDB761BB126BA00F70729 /* ToolbarSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ADDB751BB126BA00F70729 /* ToolbarSampleVC.swift */; settings = {ASSET_TAGS = (); }; };
+		A6ADDB781BB1397C00F70729 /* NavigationBarSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ADDB771BB1397C00F70729 /* NavigationBarSampleVC.swift */; settings = {ASSET_TAGS = (); }; };
 		A6E817F31BAFEBF100FF1CD3 /* IndicatorView_ProgressViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E817F21BAFEBF100FF1CD3 /* IndicatorView_ProgressViewVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		A6A9C0161BA974DA005FBE2E /* Switch_Slider_SegmentedControlSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Switch_Slider_SegmentedControlSample.swift; sourceTree = "<group>"; };
 		A6ADDB731BB0F74600F70729 /* AlertViewActionSheetSampleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewActionSheetSampleVC.swift; sourceTree = "<group>"; };
 		A6ADDB751BB126BA00F70729 /* ToolbarSampleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarSampleVC.swift; sourceTree = "<group>"; };
+		A6ADDB771BB1397C00F70729 /* NavigationBarSampleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarSampleVC.swift; sourceTree = "<group>"; };
 		A6E817F21BAFEBF100FF1CD3 /* IndicatorView_ProgressViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView_ProgressViewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 				A6E817F21BAFEBF100FF1CD3 /* IndicatorView_ProgressViewVC.swift */,
 				A6ADDB731BB0F74600F70729 /* AlertViewActionSheetSampleVC.swift */,
 				A6ADDB751BB126BA00F70729 /* ToolbarSampleVC.swift */,
+				A6ADDB771BB1397C00F70729 /* NavigationBarSampleVC.swift */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				A6ADDB741BB0F74600F70729 /* AlertViewActionSheetSampleVC.swift in Sources */,
 				A671BBA91BABCAA700EB416F /* WebViewVC.swift in Sources */,
 				A6A9BFF91BA854F9005FBE2E /* ViewController.swift in Sources */,
+				A6ADDB781BB1397C00F70729 /* NavigationBarSampleVC.swift in Sources */,
 				A6A9BFF71BA854F9005FBE2E /* AppDelegate.swift in Sources */,
 				A6ADDB761BB126BA00F70729 /* ToolbarSampleVC.swift in Sources */,
 				A6A9C0171BA974DA005FBE2E /* Switch_Slider_SegmentedControlSample.swift in Sources */,

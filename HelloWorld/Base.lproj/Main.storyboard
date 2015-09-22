@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Toolbar SampleVC-->
@@ -25,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGk-88-nuE">
-                                <rect key="frame" x="20" y="556" width="560" height="44"/>
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="Save" systemItem="save" id="SCJ-Wi-Q4C">
                                         <connections>
@@ -45,8 +46,8 @@
                         <constraints>
                             <constraint firstItem="4cB-8V-rEg" firstAttribute="centerY" secondItem="K5f-jI-NeD" secondAttribute="centerY" id="5GU-wt-aBf"/>
                             <constraint firstItem="1zU-eD-e2w" firstAttribute="top" secondItem="EGk-88-nuE" secondAttribute="bottom" id="BYx-HK-0vH"/>
-                            <constraint firstItem="EGk-88-nuE" firstAttribute="leading" secondItem="K5f-jI-NeD" secondAttribute="leadingMargin" id="Obp-xO-44G"/>
-                            <constraint firstItem="EGk-88-nuE" firstAttribute="trailing" secondItem="K5f-jI-NeD" secondAttribute="trailingMargin" id="fPC-XM-oCj"/>
+                            <constraint firstItem="EGk-88-nuE" firstAttribute="leading" secondItem="K5f-jI-NeD" secondAttribute="leadingMargin" constant="-20" id="Obp-xO-44G"/>
+                            <constraint firstItem="EGk-88-nuE" firstAttribute="trailing" secondItem="K5f-jI-NeD" secondAttribute="trailingMargin" constant="20" id="fPC-XM-oCj"/>
                             <constraint firstItem="4cB-8V-rEg" firstAttribute="centerX" secondItem="K5f-jI-NeD" secondAttribute="centerX" id="qm6-km-NCV"/>
                         </constraints>
                     </view>
@@ -57,6 +58,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qeb-W8-O7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1524" y="-917"/>
+        </scene>
+        <!--Navigation Bar SampleVC-->
+        <scene sceneID="43T-Df-yNY">
+            <objects>
+                <viewController id="8MU-XO-EnP" customClass="NavigationBarSampleVC" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Tj-Zg-6E0"/>
+                        <viewControllerLayoutGuide type="bottom" id="GjY-Gr-CMC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1rw-78-Bgd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJ1-O5-WRo">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Home" id="onH-yS-nb3">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="Back" id="sC5-h1-t3Y"/>
+                                            <barButtonItem title="Save" id="GA1-bg-v81">
+                                                <connections>
+                                                    <action selector="save:" destination="8MU-XO-EnP" id="Xpt-wk-5YT"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <barButtonItem key="rightBarButtonItem" title="＋" id="Zqi-jZ-YuM">
+                                            <connections>
+                                                <action selector="add:" destination="8MU-XO-EnP" id="aOf-fc-mS4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0b-dU-G9M">
+                                <rect key="frame" x="279" y="290" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XJ1-O5-WRo" secondAttribute="trailing" constant="-20" id="22q-4L-7W4"/>
+                            <constraint firstItem="S0b-dU-G9M" firstAttribute="centerY" secondItem="1rw-78-Bgd" secondAttribute="centerY" id="4bo-mq-4bm"/>
+                            <constraint firstItem="S0b-dU-G9M" firstAttribute="centerX" secondItem="1rw-78-Bgd" secondAttribute="centerX" id="laP-iD-7ZS"/>
+                            <constraint firstItem="XJ1-O5-WRo" firstAttribute="top" secondItem="9Tj-Zg-6E0" secondAttribute="bottom" id="uRV-1W-dMu"/>
+                            <constraint firstItem="XJ1-O5-WRo" firstAttribute="leading" secondItem="1rw-78-Bgd" secondAttribute="leadingMargin" constant="-20" id="uhi-EY-dSw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="S0b-dU-G9M" id="sc8-np-0Jp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJC-wl-eaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="-1580"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -107,10 +164,18 @@
                                     <segue destination="7JC-BB-DUS" kind="show" id="Ezc-ep-VSG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtB-iO-KVI">
+                                <rect key="frame" x="227" y="240" width="147" height="30"/>
+                                <state key="normal" title="NavigationBarSmaple"/>
+                                <connections>
+                                    <segue destination="8MU-XO-EnP" kind="show" id="wwB-OK-PLe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2ff-hH-JA9" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3Va-4Y-Tei"/>
+                            <constraint firstItem="TtB-iO-KVI" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3bT-km-JfA"/>
                             <constraint firstItem="2ff-hH-JA9" firstAttribute="top" secondItem="hYR-3W-FzL" secondAttribute="bottom" constant="10" id="4NH-QM-vB0"/>
                             <constraint firstItem="2n8-mx-4Cz" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8Yb-Jy-BKp"/>
                             <constraint firstItem="1hK-oJ-UtS" firstAttribute="top" secondItem="2n8-mx-4Cz" secondAttribute="bottom" constant="10" id="WCA-I4-rie"/>
@@ -120,6 +185,7 @@
                             <constraint firstItem="dHZ-9D-Bcy" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="fud-tw-qkR"/>
                             <constraint firstItem="hYR-3W-FzL" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="jg7-f3-qe5"/>
                             <constraint firstItem="hYR-3W-FzL" firstAttribute="top" secondItem="1hK-oJ-UtS" secondAttribute="bottom" constant="10" id="xZs-7s-fEw"/>
+                            <constraint firstItem="TtB-iO-KVI" firstAttribute="top" secondItem="dHZ-9D-Bcy" secondAttribute="bottom" constant="10" id="z9d-eA-zfJ"/>
                         </constraints>
                     </view>
                 </viewController>

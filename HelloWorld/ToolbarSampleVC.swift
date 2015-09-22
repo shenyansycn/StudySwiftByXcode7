@@ -24,10 +24,10 @@ class ToolbarSampleVC: UIViewController {
     }
     
     @IBAction func save(sender: UIBarButtonItem) {
-        label.text = "click save"
+        label.text = "click Save"
     }
     
     @IBAction func open(sender: UIBarButtonItem) {
-        label.text = "click open"
+        label.text = "click Open"
     }
 }
